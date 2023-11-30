@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block css %}
+        <link rel="stylesheet" href="{% static '/static/css/index.css'%}" media="screen">
+{% endblock %}
+
+{% block content %}
+    <section class="body-section">
+        <div class="cover-div">
+            <h1 class="heading-h1">Ваши заметки:</h1>
+            {% if tasks %}
+                {% for el in tasks %}
+                    <div class = "note-cover">
+                        <div class="time-cover">
+                            <p>Время</p>
+                        </div>
+                        <div class="text-cover">
+                            <h3>{{ el.title }}</h3>
+                            <p class="text-break">{{ el.task }}</p>
+                        </div>
+                        <div class="buttons-cover">
+                            <button class="edit-button">Редактировать</button>
+                            <button class="delete-button">Удалить</button>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>У вас нет заметок! Вы можете добавить их нажав на кнопку "Создать заметку".</p>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}
