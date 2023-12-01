@@ -1,8 +1,10 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
+
+
 {% block css %}
-        <link rel="stylesheet" href="{% static '/static/css/index.css'%}" media="screen">
+    <link rel="stylesheet" href="{% static '/static/css/index.css'%}" media="screen">
 {% endblock %}
 
 {% block content %}
@@ -12,8 +14,8 @@
             {% if tasks %}
                 {% for el in tasks %}
                     <div class = "note-cover">
-                        <div class="time-cover">
-                            <p>Время</p>
+                        <div class="date-cover">
+                            <p>{{ el.date }}</p>
                         </div>
                         <div class="text-cover">
                             <h3>{{ el.title }}</h3>

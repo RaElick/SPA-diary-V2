@@ -41,6 +41,7 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    width: 100%;
 }
 
 .note-cover{
@@ -60,7 +61,7 @@ text-break{
     word-break: break-all;
 }
 
-.time-cover{
+.date-cover{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,6 +70,7 @@ text-break{
     border: 2px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    text-align: center;
 }
 
 .text-cover{
@@ -133,3 +135,4 @@ text-break{
     margin-bottom: 21px;
     text-align: center;
 }
+
