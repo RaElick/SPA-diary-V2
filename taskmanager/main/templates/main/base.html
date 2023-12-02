@@ -22,10 +22,10 @@
             <h2 class="navbar-brand">Дневник</h2>
         </div>
 
-      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'home' %}">Главная</a>
-          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'create' %}">Создать заметку</a>
-          <button class="btn btn-sm btn-primary w-100 ml-2" onclick="location.href='{% url 'logout'  %}?next=/accounts/login'">Logout</button>
+      <nav class="custom-navbar">
+          <button class="glow-on-hover" onclick="location.href='{% url 'home' %}'">Главная</button>
+          <button class="glow-on-hover" onclick="location.href='{% url 'create' %}'">Создать заметку</button>
+          <button class="glow-on-hover" onclick="location.href='{% url 'logout'  %}?next=/accounts/login'">Logout</button>
       </nav>
     </div>
 

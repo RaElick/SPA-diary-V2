@@ -2,7 +2,7 @@
 
 
 {% block title %}
-Создать задачу
+Создать заметку
 {% endblock %}
 
 {% block content %}
@@ -19,14 +19,15 @@
     });
     </script>
     <section class="body-create">
+        <h1 class="heading-create">Создайте новую заметку!</h1>
         <form class="form-area" method="post">
-            <h1 class="heading-create">Создайте новую заметку!</h1>
             {% csrf_token %}
-            {{ form.title }}<br>
+            <div class="title-date-cover">
+                {{ form.title }}
+                {{ form.date }}
+            </div>
             {{ form.task }}<br>
-            {{ form.date }}<br>
-            <br>
-            <button type="submit" class = "btn btn-success"> Добавить</button>
+            <button type="submit" class="glow-on-hover"> Добавить</button>
             <span>{{ error }}</span>
         </form>
 

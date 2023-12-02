@@ -8,7 +8,7 @@ class TaskForm(ModelForm):
         fields = ["title", "task", "date"]
         widgets = {
             "title" : TextInput(attrs={
-                'class':'form-control',
+                'class':'title-form-control',
                 'placeholder':'Введите название'
             }),
             "task": Textarea(attrs={
