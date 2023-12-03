@@ -8,33 +8,30 @@
     <link rel = "stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <script href = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script href = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="../../static/images/diary-favicoon.ico">
 
     <title>Profile</title>
 </head>
 <body>
-<div class="wrapper">
-        <div class="logo">
-            <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt="">
-        </div>
-        <div class="text-center mt-4 name">
-            Dnevnik
-        </div>
-        <form class="p-3 mt-3" method="post">
-            {% csrf_token %}
-            <div class="form-field d-flex align-items-center">
-                <span class="far fa-user"></span>
-                <input type="text" name="username" id="username" placeholder="Username">
+    <section class="body-section">
+        <div class="reg-cover">
+
+            <img class="logo" src="../../static/images/diary-icon.png" alt="logo">
+
+            <div class="heading-h1">
+                Дневник
             </div>
-            <div class="form-field d-flex align-items-center">
-                <span class="fas fa-key"></span>
-                <input type="password" name="password" id="pwd" placeholder="Password">
+            <form class="login-form" method="post">
+                {% csrf_token %}
+                <input class="username-input" type="text" name="username" id="username" placeholder="Имя пользователя">
+                <input class="password-input" type="password" name="password" id="pwd" placeholder="Пароль">
+                {{ form.errors }}
+                <button type="submit" class="glow-on-hover">Войти</button>
+            </form>
+            <div class="text-center fs-6">
+                <a href="#">Нет аккаунта?</a>
             </div>
-            {{ form.errors }}
-            <button type="submit" class="btn mt-3">Login</button>
-        </form>
-        <div class="text-center fs-6">
-            <a href="#">Forget password?</a> or <a href="#">Sign up</a>
         </div>
-    </div>
+    </section>
 </body>
 </html>

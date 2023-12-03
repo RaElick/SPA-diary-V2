@@ -1,15 +1,30 @@
-.navbar-brand{
-    margin-left: 20px;
+.logo{
+    width: 55px;
+    height: 55px;
 }
 
+.diary-heading{
+    font-size: 28px;
+}
 
 .navbar-default{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin: 0;
     background-color: #ffffff;
     border: 2px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     height: 70px
+}
 
+.navbar-header{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    align-items: center;
+    gap: 15px
 }
 
 .body-section{
@@ -213,6 +228,7 @@ text-break{
     width: 32%;
     border-radius: 0.375rem;
     padding: 0.375rem 0.75rem;
+    border: var(--bs-border-width) solid var(--bs-border-color);
 }
 
 .datetime-input:focus {
@@ -228,6 +244,7 @@ text-break{
     border-radius: 0.375rem;
     color: #fff;
     padding: 0.375rem 0.75rem;
+    border: var(--bs-border-width) solid var(--bs-border-color);
 }
 
 .title-form-control:focus {
