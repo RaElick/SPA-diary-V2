@@ -1,9 +1,7 @@
 {% extends 'main/base.html' %}
 
 
-{% block title %}
-Создать заметку
-{% endblock %}
+{% block title %} Создать заметку {% endblock %}
 
 {% block content %}
     <link href="//cdn.bootcss.com/bootstrap-datetimepicker/4.17.44/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
@@ -27,7 +25,7 @@
                 {{ form.date }}
             </div>
             {{ form.task }}<br>
-            <button type="submit" class="glow-on-hover"> Добавить</button>
+            <button type="submit" class="glow-on-hover">Добавить</button>
             <span>{{ error }}</span>
         </form>
 

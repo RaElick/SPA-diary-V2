@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %} Создать заметку {% endblock %}
+
+{% block content %}
+    <section class="body-create">
+        <h1 class="heading-create">Удалить заметку?</h1>
+        <form class="form-area" method="post">
+            {% csrf_token %}
+            <button type="submit" class="glow-on-hover">Удалить</button>
+        </form>
+    </section>
+{% endblock %}

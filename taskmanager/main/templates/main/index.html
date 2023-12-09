@@ -22,8 +22,8 @@
                             <p class="text-break">{{ el.task }}</p>
                         </div>
                         <div class="buttons-cover">
-                            <button class="edit-button">Редактировать</button>
-                            <button class="delete-button">Удалить</button>
+                            <button class="edit-button" onclick="location.href='{% url 'note-update' el.id %}'" >Редактировать</button>
+                            <button class="delete-button" onclick="location.href='{% url 'note-delete' el.id %}'" >Удалить</button>
                         </div>
                     </div>
                 {% endfor %}
