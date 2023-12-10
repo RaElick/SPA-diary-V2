@@ -19,8 +19,11 @@ class RegistrationForm(UserCreationForm):
 class TaskForm(ModelForm):
     class Meta:
         model=Task
-        fields = ["title", "task", "date", "author"]
+        fields = ["title", "task", "date"]
+        exclude = ["author"]
         widgets = {
+            "author": TextInput(attrs={
+            }),
             "title" : TextInput(attrs={
                 'class':'title-form-control',
                 'placeholder':'Введите название'

@@ -17,18 +17,18 @@ def create(request):
     error=''
     if request.method == 'POST':
         form = TaskForm(request.POST)
+        form.author = request.user
         if form.is_valid():
+            form = form.save(commit=False)
+            form.author = request.user
             form.save()
             return redirect('home')
         else:
             error='Введите корректные данные!'
 
     form = TaskForm()
-    context = {
-        'form': form,
-        'error':error
-    }
-    return render(request, 'main/create.html', context)
+
+    return render(request, 'main/create.html', locals())
 
 
 

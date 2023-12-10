@@ -7,6 +7,13 @@
     font-size: 28px;
 }
 
+.p-error{
+    color: #999;
+    text-align: left;
+    width: 90%;
+    font-size: 28px;
+}
+
 .navbar-default{
     display: flex;
     flex-direction: row;
@@ -110,12 +117,19 @@ text-break{
     gap: 5px;
 }
 
+.buttons-width-cover{
+    display: flex;
+    width: 135px;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .edit-button{
     background-color: #5cb85c;
     color: #ffffff;
     border-radius: 4px;
     border: 3px solid transparent;
-    width: 50%;
+    width: 100%;
 }
 
 .delete-button{
@@ -123,7 +137,7 @@ text-break{
     color: #ffffff;
     border-radius: 4px;
     border: 3px solid transparent;
-    width: 50%;
+    width: 100%;
 }
 
 .form-area{
@@ -275,7 +289,7 @@ textarea[name='task']{
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-textarea[name:'task']:focus{
+textarea[name='task']:focus {
     color: #212529;
     background-color: #fff;
     border-color: #86b7fe;
